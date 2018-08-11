@@ -21,12 +21,6 @@ namespace NumberCharacterCount
             int hundredAnd = "HundredAnd".Length * 99 * 9;
             int num1to1000 = (num1to9 * 100) + (num1to99 * 10) + hundred + hundredAnd + "oneThousand".Length;
 
-            //Testing
-            Console.WriteLine("Numbers 1 to 9 = " + num1to9);
-            Console.WriteLine("Numbers 10 to 19 = " + num10to19);
-            Console.WriteLine("Numbers 20 to 90 = " + num20to90);
-            Console.WriteLine("Numbers 1 to 99 = " + num1to99);
-
             Console.WriteLine("Answer = " + num1to1000);
 
             //ReadKey(); Utilized to terminate the application easily
