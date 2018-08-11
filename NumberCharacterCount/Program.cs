@@ -6,13 +6,32 @@ namespace NumberCharacterCount
     {
         private static void Main()
         {
-            //Q17 - If the numbers from 1 to 1000 (one thousand) inclusive were written in words, how many letters would be used?
-            //NOTE: Don't count spaces or hyphens. E.g. 342 (three hundred and forty-two) contains 23 letters and 115 (one hundred and fifteen) contains 20 letters.
+            /*Q17 - If the numbers from 1 to 1000 (one thousand) inclusive were written in words, how many letters would be used?
+            NOTE: Don't count spaces or hyphens. E.g. 342 (three hundred and forty-two) contains 23 letters and 115 (one hundred and fifteen) contains 20 letters.*/
             Console.WriteLine("Solution to Number Letter Count - Question 17");
+            Console.WriteLine();
 
+            int num1to9 = "OneTwoThreeFourFiveSixSevenEightNine".Length;
+            int num10to19 = "TenElevenTwelveThirteenFourteenFifteenSixteenSeventeenEighteenNineteen".Length;
+            int num20to90 = "TwentyThirtyFortyFiftySixtySeventyEightyNinety".Length;
 
-            //ReadKey(); Utilized to terminate the application according to the user
-            Console.WriteLine("Press any key to exit the application");
+            //Calculations used to establish the number of times the same set of characters occur within a number range
+            int num1to99 = (num1to9 * 9) + num10to19 + (num20to90 * 10);
+            int hundred = "Hundred".Length * 9;
+            int hundredAnd = "HundredAnd".Length * 99 * 9;
+            int num1to1000 = (num1to9 * 100) + (num1to99 * 10) + hundred + hundredAnd + "oneThousand".Length;
+
+            //Testing
+            Console.WriteLine("Numbers 1 to 9 = " + num1to9);
+            Console.WriteLine("Numbers 10 to 19 = " + num10to19);
+            Console.WriteLine("Numbers 20 to 90 = " + num20to90);
+            Console.WriteLine("Numbers 1 to 99 = " + num1to99);
+
+            Console.WriteLine("Answer = " + num1to1000);
+
+            //ReadKey(); Utilized to terminate the application easily
+            Console.WriteLine();
+            Console.WriteLine("\"Press any key to exit the application.\"");
             Console.ReadKey();
         }
     }
